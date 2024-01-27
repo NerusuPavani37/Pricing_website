@@ -1,0 +1,149 @@
+body {
+  background: url("../images/bg-bottom.svg") no-repeat bottom left,
+    url("../images/bg-top.svg") no-repeat top right;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e6e6f3;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+}
+
+/* Hide the checkbox input */
+.toggle input {
+  display: none;
+}
+
+/* Describe slider's look and position. */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* Describe the white ball's location 
+    and appearance in the slider. */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Modify the slider's background color to 
+    green once the checkbox has been selected. */
+input:checked + .slider {
+  background-color: #9494d8;
+}
+
+/* When the checkbox is checked, shift the 
+    white ball towards the right within the slider. */
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px; /* Added margin at the bottom */
+}
+
+.buttons h4 {
+  margin-top: 10px;
+  color: #666;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  margin-top: 5%;
+}
+
+.card {
+  background-color: #fff;
+  color: black;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0 4px 8px rgba(115, 179, 244, 0.1);
+  cursor: pointer;
+  height: 400px;
+  width: 250px;
+  gap: 0px;
+  border-radius: 10px;
+  transition: background-color 0.4s;
+  text-align: center;
+}
+
+.card:hover {
+  background-image: linear-gradient(to bottom right, #c6c6f4, #5858be);
+  color: #fff;
+  height: 450px;
+  width: 300px;
+  transform: translateY(-25px);
+
+  button {
+    background-image: none;
+    background-color: white;
+    color: #9494d8;
+  }
+
+  h4 {
+    color: #fff;
+  }
+}
+
+.card h4 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: -2px;
+}
+
+.annually {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.monthly {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 8px 0;
+  border-bottom: 1px solid gray;
+  padding: 15px;
+  font-weight: 600;
+}
+
+button {
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #c6c6f4, #5858be);
+  padding: 10px 50px;
+  border-radius: 5px;
+  border: 1px solid #aeaeeb;
+  transition: 0.4s;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
